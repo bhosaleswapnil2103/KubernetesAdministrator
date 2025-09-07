@@ -1,0 +1,20 @@
+#kubectl run admin-pod --image=busybox --command sleep 3200 --dry-run=client -o yaml > admin-pod.yaml
+
+#vi admin-pod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: admin-pod
+  name: admin-pod
+spec:
+  containers:
+  - command:
+    - sleep
+    - "3200"
+    image: busybox
+    name: admin-pod
+
+
+#kubectl apply -f admin-pod.yaml
