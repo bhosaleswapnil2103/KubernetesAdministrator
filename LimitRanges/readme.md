@@ -8,8 +8,12 @@ Why LimitRange is Important?
 
 A user deploys a Pod without setting resource limits & Pod consumes all CPU and slows down others.	    
 Solution - LimitRange can automatically apply default limits.
+
+
 A user sets extremely low resources & Pod keeps crashing due to low memory.	        
 Solution - LimitRange enforces a minimum resource request.
+
+
 A single Pod uses excessive resources & One Pod uses 4GB RAM while others need space.	
 Solution - LimitRange enforces a maximum per Pod or container.
 
